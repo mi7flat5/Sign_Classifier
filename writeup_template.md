@@ -1,4 +1,4 @@
-#**Traffic Sign Recognition** 
+# **Traffic Sign Recognition** 
 
 ---
 
@@ -27,11 +27,11 @@ The goals / steps of this project are the following:
 ## Rubric Points
 ---
 
-#Here is a link to my [project code](https://github.com/mi7flat/Sign_Classifier/blob/master/Traffic_Sign_Classifier.ipynb)
+# Here is a link to my [project code](https://github.com/mi7flat/Sign_Classifier/blob/master/Traffic_Sign_Classifier.ipynb)
 
-###Data Set Summary & Exploration
+### Data Set Summary & Exploration
 
-####1. Provide a basic summary of the data set. In the code, the analysis should be done using python, numpy and/or pandas methods rather than hardcoding results manually.
+#### 1. Provide a basic summary of the data set. In the code, the analysis should be done using python, numpy and/or pandas methods rather than hardcoding results manually.
 
 I used vanilla python to calculate summary statistics of the traffic
 signs data set:
@@ -44,16 +44,16 @@ signs data set:
 
 
 
-###Design and Test a Model Architecture
+### Design and Test a Model Architecture
 
-####1. Data preprocessing
+####1 . Data preprocessing
 
 With the Lenet code I was already getting high validation so I chose only to normalize the data set. I tried both grayscaling and converting to HSV with great results for test, validation and training sets, but classifying images from the web were terrible with this method, so I chose to keep it simple and am very pleased with the results. I normalized the pictures to values between -1 and 1. 
 
 
 
 
-####2. Describe what your final model architecture looks like including model type, layers, layer sizes, connectivity, etc.) Consider including a diagram and/or table describing the final model.
+#### 2. Describe what your final model architecture looks like including model type, layers, layer sizes, connectivity, etc.) Consider including a diagram and/or table describing the final model.
 
 My final model consisted of the following layers:
 
@@ -80,11 +80,11 @@ My final model consisted of the following layers:
  
 
 
-####3. Describe how you trained your model. The discussion can include the type of optimizer, the batch size, number of epochs and any hyperparameters such as learning rate.
+#### 3. Describe how you trained your model. The discussion can include the type of optimizer, the batch size, number of epochs and any hyperparameters such as learning rate.
 
 I used the batch size that LeNet used as it didn't seem to make a difference in anything other than processing times if I increased it. I chose to do 20 epochs for this model because this would insure that my model reached a validation set accuracy of 93 percent though it often reaches that much sooner. I used a less agressive learning rate thatn LeNet because it would often get stuck bouncing back in forth in arbitrary value ranges. 
 
-####4. Describe the approach taken for finding a solution and getting the validation set accuracy to be at least 0.93.
+#### 4. Describe the approach taken for finding a solution and getting the validation set accuracy to be at least 0.93.
 
 I chose to stay close to LeNet architecture, though in order to reach 93% validation accuracy I had to make a few adjustements. 
 The validation and training accuracy calculations were calculated in an evaluate function called at the end of each epoch in training. 
@@ -98,9 +98,9 @@ My final model results were:
 * test set accuracy of .929
 
 
-###Test a Model on New Images
+### Test a Model on New Images
 
-####1. Choose five German traffic signs found on the web and provide them in the report. For each image, discuss what quality or qualities might be difficult to classify.
+#### 1. Choose five German traffic signs found on the web and provide them in the report. For each image, discuss what quality or qualities might be difficult to classify.
 
 Here are five German traffic signs that I found on the web:
 
@@ -109,7 +109,7 @@ Here are five German traffic signs that I found on the web:
 
 The first image might be difficult to classify because ...
 
-####2. Discuss the model's predictions on these new traffic signs and compare the results to predicting on the test set. At a minimum, discuss what the predictions were, the accuracy on these new predictions, and compare the accuracy to the accuracy on the test set (OPTIONAL: Discuss the results in more detail as described in the "Stand Out Suggestions" part of the rubric).
+#### 2. Discuss the model's predictions on these new traffic signs and compare the results to predicting on the test set. At a minimum, discuss what the predictions were, the accuracy on these new predictions, and compare the accuracy to the accuracy on the test set (OPTIONAL: Discuss the results in more detail as described in the "Stand Out Suggestions" part of the rubric).
 
 Here are the results of the prediction:
 
