@@ -46,7 +46,7 @@ signs data set:
 
 ### Design and Test a Model Architecture
 
-####1 . Data preprocessing
+#### 1 . Data preprocessing
 
 With the Lenet code I was already getting high validation so I chose only to normalize the data set. I tried both grayscaling and converting to HSV with great results for test, validation and training sets, but classifying images from the web were terrible with this method, so I chose to keep it simple and am very pleased with the results. I normalized the pictures to values between -1 and 1. 
 
@@ -107,22 +107,22 @@ Here are five German traffic signs that I found on the web:
 ![alt text][image4] ![alt text][image5] ![alt text][image6] 
 ![alt text][image7] ![alt text][image8]
 
-The first image might be difficult to classify because ...
+The only image that the network currently has a problem with is the stop sign. this may be because this image not from a photgraph of a stop sign. 
 
-#### 2. Discuss the model's predictions on these new traffic signs and compare the results to predicting on the test set. At a minimum, discuss what the predictions were, the accuracy on these new predictions, and compare the accuracy to the accuracy on the test set (OPTIONAL: Discuss the results in more detail as described in the "Stand Out Suggestions" part of the rubric).
+#### 2. Discuss the model's predictions on these new traffic signs and compare the results to predicting on the test set.
 
 Here are the results of the prediction:
 
-| Image			        |     Prediction	        					| Probability
-|:---------------------:|:---------------------------------------------:| 
-| No Passing      		| No Passing   									| 1.0|
-| Stop     			| Stop 										| 1.0 |
+| Image			        |     Prediction	        					| Probability|
+|:---------------------:|:----------------------:|:-----------------------:| 
+| No Passing      		    | No Passing   									 | 1.0|
+| Stop     			| 80 km/hr 										| 1.0 |
 | No Vehicles					| No Vehicles										| .97|
 | Roundabout Mandatory | Roundabout Mandatory | .99 |
-|  Wild Animals  		| Wild Animals					 				| 1.0
-| 60 km/h				| 60 km/h	      							| 1.0
+|  Wild Animals  		| Wild Animals					 				| 1.0|
+| 60 km/h				| 60 km/h	      							| 1.0|
 
-I had the model predict each sign 5 times and the model performs on them about as well as it does on the training, validation and test sets. Calculating this a coule times I generally come up between 70% and 90% accuracy. I chose each picture and cropped it to a 32x32 image as the network expects. I do think the network is probably brittle in reguards to translated, rotated or skewed pictures, as it has not been trained under those conditions, but I don't think it is far from being useful. It would be a good part of a larger perception pipeline. 
+I had the model predict each sign 5 times and the model performs on them about as well as it does on the training, validation and test sets. Calculating this a coule times I generally come up between 70% and 90% accuracy. I chose each picture and cropped it to a 32x32 image as the network expects. I do think the network is probably brittle in regards to translated, rotated or skewed pictures, as it has not been trained under those conditions, but I don't think it is far from being useful. It would be a good part of a larger perception pipeline. 
 
 
 
