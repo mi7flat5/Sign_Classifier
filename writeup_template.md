@@ -28,9 +28,8 @@ The goals / steps of this project are the following:
 ## Rubric Points
 ---
 
-# Here is a link to my [project code](https://github.com/mi7flat/Sign_Classifier/blob/master/Traffic_Sign_Classifier.ipynb)
-
-### Data Set Summary & Exploration
+# Here is a link to my [project code](https://github.com/mi7flat5/Sign_Classifier/blob/master/Traffic_Sign_Classifier.ipynb)
+                                      
 
 #### 1. Provide a basic summary of the data set. In the code, the analysis should be done using python, numpy and/or pandas methods rather than hardcoding results manually.
 
